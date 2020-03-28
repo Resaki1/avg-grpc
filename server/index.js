@@ -30,12 +30,12 @@ server.addProtoService(protoFile.suppliers.SupplierService.service, {
     callback(null, { names: findAllPreferredSuppliers()})
   },
   findPreferredSupplier(call, callback) {
-    callback(null, findPreferredSupplier(call.id))
+    callback(null, { name: findPreferredSupplier(call.request.id)})
   },
   setPreferredSupplierForProduct(call, callback) {
-    const { productID, supplier } = call;
+    const { productID, supplier } = call.request;
     const result = setPreferredSupplierForProduct(productID, supplier);
-    callback(null, result)
+    callback(null, { isSet: result})
   }
 })
 server.bind(
