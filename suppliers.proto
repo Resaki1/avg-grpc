@@ -1,0 +1,28 @@
+syntax="proto3";
+
+package suppliers;
+
+service SupplierService {
+    rpc findAllPreferredSuppliers (SearchParameter) returns (SupplierList);
+    rpc findPreferredSupplier (Product) returns (Supplier);
+    rpc setPreferredSupplierForProduct(PreferedSupplierForProduct) returns (isSet);
+}
+message SearchParameter {
+    string param = 1;
+}
+message Product {
+    int32 id = 1;
+}
+message SupplierList {
+    repeated string names = 1;
+}
+message Supplier {
+    string name = 1;
+}
+message PreferedSupplierForProduct {
+    Product productID = 1;
+    Supplier supplier = 2;
+}
+message isSet {
+    bool isSet = 1;
+}
