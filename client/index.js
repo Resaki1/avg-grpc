@@ -13,16 +13,16 @@ client.findAllPreferredSuppliers(search, (error,response) => {
     }
 })
 client.findPreferredSupplier({id: 1}, (error, response) => {
-    if (!error) {
+    if (!error) { 
         console.log("Found product: ", response);
     } else {
         console.log("Error", error.message);
-    }
+    } 
 })
-client.setPreferredSupplierForProduct({ productID: { id: 1}}, { supplier: "test" }, (error, response) => {
+client.setPreferredSupplierForProduct({ productID: 1, supplierName: "Nike" }, (error, response) => {
     if (!error) {
         console.log("It worked", response);
     } else {
-        console.log("Error", message);
+        console.log(error.details);
     }
 })

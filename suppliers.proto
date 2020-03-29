@@ -20,8 +20,8 @@ message Supplier {
     string name = 1;
 }
 message PreferedSupplierForProduct {
-    Product productID = 1;
-    Supplier supplier = 2;
+    int32 productID = 1;
+    string supplierName = 2;
 }
 message isSet {
     bool isSet = 1;

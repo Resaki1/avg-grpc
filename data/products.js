@@ -14,4 +14,14 @@ const helmet = {
     preferredSupplier: "Castelli"
 }
 
+const nike = {
+    name: "Nike"
+}
+const adidas = {
+    name: "Adidas" 
+}
+const castelli = {
+    name:"Castelli"
+}
 export const products = [shoes, gloves, helmet];
+export const suppliers = [nike, adidas, castelli];
