@@ -11,7 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "@grpc/proto-loader": "^0.5.3",
-    "grpc": "^1.24.2",
+    "grpc": "^1.24.9",
     "prettier": "^2.0.2",
     "uuid": "^7.0.2"
   }
